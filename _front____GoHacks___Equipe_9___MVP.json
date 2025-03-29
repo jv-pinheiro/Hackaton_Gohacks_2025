@@ -1,0 +1,84 @@
+{
+  "name": "[front] - GoHacks - Equipe 9 - MVP",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "equipe9-xyz-wwh2",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "a5465080-5a99-4660-ac9e-5215d03e6b02",
+      "name": "Webhook",
+      "webhookId": "574e93aa-fdbc-489b-bfed-88a94016a5a5"
+    },
+    {
+      "parameters": {
+        "html": "<!DOCTYPE html>\n\n<html>\n<head>\n  <meta charset=\"UTF-8\" />\n  <link rel=\"icon\" type=\"image/png\" href=\"https://www.igtfortaleza.com.br/wp-content/uploads/2020/04/Gocase.png\">\n  <link href=\"https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css\" rel=\"stylesheet\" />\n  <title>Gocase Site Fake</title>\n  <style>\n    :root {\n\t--chat--color-primary: #e2619f;\n\t--chat--color-primary-shade-50: #e2619f;\n\t--chat--color-primary-shade-100: #e2619f;\n\t--chat--color-secondary: #20b69e;\n\t--chat--color-secondary-shade-50: #1ca08a;\n\t--chat--color-white: #ffffff;\n\t--chat--color-light: #f2f4f8;\n\t--chat--color-light-shade-50: #e6e9f1;\n\t--chat--color-light-shade-100: #c2c5cc;\n\t--chat--color-medium: #d2d4d9;\n\t--chat--color-dark: #101330;\n\t--chat--color-disabled: #777980;\n\t--chat--color-typing: #404040;\n\n\t--chat--spacing: 1rem;\n\t--chat--border-radius: 0.25rem;\n\t--chat--transition-duration: 0.15s;\n\n\t--chat--window--width: 400px;\n\t--chat--window--height: 600px;\n\n\t--chat--header-height: auto;\n\t--chat--header--padding: var(--chat--spacing);\n\t--chat--header--background: var(--chat--color-dark);\n\t--chat--header--color: var(--chat--color-light);\n\t--chat--header--border-top: none;\n\t--chat--header--border-bottom: none;\n\t--chat--header--border-bottom: none;\n\t--chat--header--border-bottom: none;\n\t--chat--heading--font-size: 2em;\n\t--chat--header--color: var(--chat--color-light);\n\t--chat--subtitle--font-size: inherit;\n\t--chat--subtitle--line-height: 1.8;\n\n\t--chat--textarea--height: 50px;\n\n\t--chat--message--font-size: 1rem;\n\t--chat--message--padding: var(--chat--spacing);\n\t--chat--message--border-radius: var(--chat--border-radius);\n\t--chat--message-line-height: 1.8;\n\t--chat--message--bot--background: var(--chat--color-white);\n\t--chat--message--bot--color: var(--chat--color-dark);\n\t--chat--message--bot--border: none;\n\t--chat--message--user--background: var(--chat--color-secondary);\n\t--chat--message--user--color: var(--chat--color-white);\n\t--chat--message--user--border: none;\n\t--chat--message--pre--background: rgba(0, 0, 0, 0.05);\n\n\t--chat--toggle--background: var(--chat--color-primary);\n\t--chat--toggle--hover--background: var(--chat--color-primary-shade-50);\n\t--chat--toggle--active--background: var(--chat--color-primary-shade-100);\n\t--chat--toggle--color: var(--chat--color-white);\n\t--chat--toggle--size: 64px;\n}\n  </style>\n</head>\n<body>\n  <div class=\"container\">\n    <h1>Colocar aqui alguma coisa parecida com o site Gocase</h1>\n  </div>\n\n<script type=\"module\">\n\timport { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';\n\n\tcreateChat({\n\twebhookUrl: 'https://gohacks.gocase.com.br/webhook/1308d720-daa1-4f4d-a745-97447e1075e1/chat',\n\twebhookConfig: {\n\t\tmethod: 'POST',\n\t\theaders: {}\n\t},\n\ttarget: '#n8n-chat',\n\tmode: 'window',\n\tchatInputKey: 'chatInput',\n\tchatSessionKey: 'sessionId',\n\tmetadata: {},\n\tshowWelcomeScreen: false,\n\tdefaultLanguage: 'en',\n\tinitialMessages: [\n\t\t'Olá, Gocaser! 👋',\n\t\t'Sou o GoBusca. Estou aqui para te ajudar...',\n        'Você precisa de ajuda para encontrar algum produto?'\n\t],\n\ti18n: {\n\t\ten: {\n\t\t\ttitle: 'GoBusca na área 👋',\n\t\t\tsubtitle: \"E estou on 24h por dia.\",\n\t\t\tfooter: '',\n\t\t\tgetStarted: 'New Conversation',\n\t\t\tinputPlaceholder: 'Type your question..',\n\t\t},\n\t},\n});\n</script>\n  \n</body>\n</html>\n\n<style>\n.container {\n  background-color: #ffffff;\n  text-align: center;\n  padding: 16px;\n  border-radius: 8px;\n}\n\nh1 {\n  color: #ff6d5a;\n  font-size: 24px;\n  font-weight: bold;\n  padding: 8px;\n}\n\nh2 {\n  color: #909399;\n  font-size: 18px;\n  font-weight: bold;\n  padding: 8px;\n}\n</style>\n\n<script>\nconsole.log(\"Hello World!\");\n</script>"
+      },
+      "type": "n8n-nodes-base.html",
+      "typeVersion": 1.2,
+      "position": [
+        220,
+        0
+      ],
+      "id": "8e32912e-10ed-4fb7-b8ba-ff6d4a2c1eb7",
+      "name": "HTML"
+    },
+    {
+      "parameters": {
+        "respondWith": "text",
+        "responseBody": "={{ $json.html }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        440,
+        0
+      ],
+      "id": "86b649ed-ea86-4496-9b01-d3a57d46c396",
+      "name": "Respond to Webhook"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "HTML",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTML": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "ec8c2a4a-43ab-4b0f-a5b8-e8d8f83621a1",
+  "meta": {
+    "instanceId": "56c996895454f2c378d95472e9e4f79954d0d177b1ed0bbeadc22a88126eea2c"
+  },
+  "id": "dCFOmAeMKXrcCnz4",
+  "tags": []
+}

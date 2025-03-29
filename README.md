@@ -1,4 +1,4 @@
-# GoHacks - Equipe 9 - MVP
+# GoHacks - MVP
 
 ## 📌 Descrição
 Este projeto é um MVP desenvolvido durante o hackathon GoHacks 2025. O objetivo é criar uma automação no N8N para auxiliar a aquisição e qualificação de leads para a empresa Gocase, por meio de um chatbot interativo integrado ao site da marca.
